@@ -1,0 +1,15 @@
+{
+  "name": "lovense-forza",
+  "version": "1.0.0",
+  "description": "Vibrate toys as you do specific actions in Forza",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "forza.js": "github:MatthewCash/forza.js",
+    "node-fetch": "^3.2.6"
+  }
+}
