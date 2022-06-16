@@ -4,13 +4,23 @@ const forza = new Forza.default();
 const fetch = (...args) =>
   import("node-fetch").then(({ default: fetch }) => fetch(...args));
 
-var toy = 'e47cc27be2c1';
-var platform = "android";
-var domain = "192-168-1-98.lovense.club";
-var port = "30010";
+// Go to https://api.lovense.com/api/lan/getToys
+// And Grab a few fields
+var toy = 'TOY_ID';           // Find the ToyId (random sort of Characters to Vibrate) 
+var platform = "android";     // What Device you are using. PC / Android / iOS
+var domain = "192-168-1-98.lovense.club"; // Domain from Lovense
+var port = "30010";           // httpsPort 
 
+// Select what it will react to
+// rpm            - RPM from the Engine        (Best all around experience)
+// rumble-average - Surface Rumble (Average)
+// speed          - Speed, slow but fun
+// power          - Not quite sure, seems to be a similar thing to rpm.
+// torque         - Torque of the Vehicle
+// brake          - How hard are you pushing down on the Brake Pedal
+// accel          - How hard are you pushing down on the Accel Pedal
 var vibrationFrom = 'speed';
-var maxVibration = 20;
+var maxVibration = 20;      // Max Power of 1-20 (Use 20 if ya wanna go wild)
 
 (async function () {
     await forza.loadGames();
