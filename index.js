@@ -132,10 +132,8 @@ const processData = function (data) {
 
   var vibrationFrom = null;
   while (vibrationFrom === null) {
-    vibrationFrom = prompt(
-      chalk.bold("Select an option for Toys to React to?\n") +
-      chalk.green("> ")
-    );
+    console.log(chalk.bold("Select an option for Toys to React to?"))
+    vibrationFrom = prompt( chalk.green("> ") );
 
     if (!vibrationFrom || acceptedValues.indexOf(vibrationFrom) === -1) {
       vibrationFrom = null;
@@ -147,10 +145,8 @@ const processData = function (data) {
 
   var maxVibration = null; // Max Power of 1-20 (Use 20 if ya wanna go wild)
   while (maxVibration === null) {
-    var stringMax = prompt(
-      chalk.bold("What is the Max Vibration you would like to have? (1 to 20)\n") +
-      chalk.green("> ")
-    );
+    console.log(chalk.bold("What is the Max Vibration you would like to have? (1 to 20)"))
+    var stringMax = prompt( chalk.green("> ") );
     maxVibration = Number(stringMax);
 
     if (isNaN(maxVibration) || maxVibration < 1) {
