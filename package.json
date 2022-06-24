@@ -10,8 +10,10 @@
   "author": "Lat3xKitty",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^5.0.1",
     "forza.js": "github:MatthewCash/forza.js",
-    "node-fetch": "^3.2.6"
+    "node-fetch": "^3.2.6",
+    "prompt-sync": "^4.2.0"
   },
   "repository": {
     "type": "git",
@@ -23,11 +25,12 @@
     "lovense",
     "remote control",
     "lewd",
-    "viibration",
+    "vibration",
     "gamesync",
     "forza"
   ],
   "contributors": [
     "TrappyChastity"
-  ]
+  ],
+  "type": "module"
 }
