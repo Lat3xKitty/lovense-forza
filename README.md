@@ -11,6 +11,7 @@ Inside of Forza you are required to setup a few different settings to spit out t
 **Enable "Data Out" in Forza Settings**
 - This is usually near the bottom of `HUD AND GAMEPLAY`
 - Set IP address to `127.0.0.1` and port to
+
 | Game               | Port |
 | ------------------ | ---- |
 | Forza Motorsport 7 | 9917 |
