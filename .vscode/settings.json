@@ -1,0 +1,21 @@
+{
+  "[javascript]": {
+    "editor.maxTokenizationLineLength": 2500,
+    "editor.quickSuggestions": { "strings": true, "other": "on" },
+    "editor.suggest.insertMode": "replace",
+    "gitlens.codeLens.scopes": ["document"],
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[json]": {
+    "editor.quickSuggestions": { "strings": true, "other": "on" },
+    "editor.suggest.insertMode": "replace",
+    "gitlens.codeLens.scopes": ["document"],
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
