@@ -179,7 +179,9 @@ const processData = function (data) {
 
     if (!vibrationFrom || acceptedValues.indexOf(vibrationFrom) === -1) {
       vibrationFrom = null;
-      console.warn(chalk.yellow('Invalid Value selected, please select a value from the list above'));
+      console.warn(
+        chalk.yellow('Invalid Value selected, please select a value from the list above')
+      );
     }
   }
 
