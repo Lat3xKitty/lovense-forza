@@ -19,7 +19,7 @@ const port = '30010'; // httpsPort
 
 const acceptedValues = ['rpm', 'rumble-average', 'speed', 'power', 'torque', 'brake', 'accel'];
 
-// NOTE: THese are used in functions and whoile loops lower down. Instantiating here to avoid squigglies
+// NOTE: These are used in functions and whoile loops lower down. Instantiating here to avoid squigglies
 let vibrationFrom = null;
 let maxVibration = null; // Max Power of 1-20 (Use 20 if ya wanna go wild)
 let lastVibration = 0;
@@ -27,7 +27,7 @@ let lastVibration = 0;
 /**
  * Takes an Object and makes it URL safe ( `a=1&c=2` etc)
  * @param {object} myData Any ob3jct basically
- * @returns URL safe version of the properties in the object
+ * @returns {string} URL safe version of the properties in the object
  */
 function getProp(myData) {
   const out = [];
@@ -38,6 +38,12 @@ function getProp(myData) {
   return out.join('&');
 }
 
+/**
+ * @description Construct new domain from given inputs
+ * @param {string} endpoint
+ * @param {object} [values]
+ * @returns {string} The New Domain
+ */
 function lovenseUrl(endpoint, values) {
   if (endpoint.indexOf('A') === 0 && platform == 'pc') endpoint = endpoint.substring(1); // Removes the A for PC specific.
 
@@ -66,6 +72,7 @@ const throttle = (func, limit) => {
 /**
  * @description Send Vibration value to Lovense Toy
  * @param {number} vibration from `0-1` representring percentage, i.e `0.5 === 50%`
+ * @returns {void}
  */
 const sendVibration = function (vibration) {
   if (vibration !== lastVibration) {
@@ -86,6 +93,7 @@ const sendVibration = function (vibration) {
 /**
  * @description Process the data coming from the game
  * @param {object} data
+ * @returns {void}
  */
 const processData = function (data) {
   /**
