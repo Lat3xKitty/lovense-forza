@@ -6,10 +6,13 @@ dictionaryDefinitions: []
 dictionaries: []
 words:
   - Accel
-  - domi
+  - Domi
   - Forza
   - Lovense
   - Trappy
+  - pnpm
   - vars
-ignoreWords: []
+ignoreWords:
+  - bbwe
+  - wekyb
 import: []

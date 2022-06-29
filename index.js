@@ -49,7 +49,7 @@ function lovenseUrl(endpoint, values) {
   return newDomain;
 }
 
-// Throttling Functionm
+// Throttling Function
 const throttle = (func, limit) => {
   let inThrottle;
   return function () {

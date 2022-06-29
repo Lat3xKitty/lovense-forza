@@ -1,5 +1,22 @@
 # Lovense Forza #
 
+## Table Of Contents ##
+
+- [Lovense Forza](#lovense-forza)
+  - [Table Of Contents](#table-of-contents)
+  - [Intro](#intro)
+  - [Setup](#setup)
+    - [Enable "Data Out" in Forza Settings](#enable-data-out-in-forza-settings)
+    - [Network Isolation](#network-isolation)
+      - [Forza Motorsport 7](#forza-motorsport-7)
+      - [Forza Horizon 4](#forza-horizon-4)
+      - [Forza Horizon 5](#forza-horizon-5)
+  - [Starting the app](#starting-the-app)
+  - [Telemetry to choose from](#telemetry-to-choose-from)
+  - [Where to get toy Data](#where-to-get-toy-data)
+
+## Intro ##
+
 An Unofficial integration with Forza to Vibrate toys as you play using the In-build Telemetry / Data Out feature. Vibrate while you drive. 😎
 
 > Please note, that this should be used for Single player enjoyment or Multiplayer with Consenting participants. This mod shouldn't be used with Unsuspecting players in Multiplayer games*
@@ -28,7 +45,7 @@ Thankfully it can be done on a per-app basis by running the corresponding powers
 #### Forza Motorsport 7 ####
 
 ```cmd
-CheckNetIsolation.exe LoopbackExempt -a -n="microsoft.apollobasegame`_`1.174.4791.2_x64__8wekyb3d8bbwe"
+CheckNetIsolation.exe LoopbackExempt -a -n="microsoft.apollobasegame_1.174.4791.2_x64__8wekyb3d8bbwe"
 ```
 
 #### Forza Horizon 4 ####
