@@ -19,7 +19,7 @@
 
 An Unofficial integration with Forza to Vibrate toys as you play using the In-build Telemetry / Data Out feature. Vibrate while you drive. 😎
 
-> Please note, that this should be used for Single player enjoyment or Multiplayer with Consenting participants. This mod shouldn't be used with Unsuspecting players in Multiplayer games*
+> Please note, that this should be used for Single player enjoyment or Multiplayer with Consenting participants. This mod shouldn't be used with Unsuspecting players in Multiplayer games
 
 ## Setup ##
 
