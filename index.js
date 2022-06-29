@@ -143,30 +143,9 @@ const processData = function (data) {
   sendVibration(vibrationInt);
 };
 
-while (vibrationFrom === null) {
-  console.log(chalk.bold('Select an option for Toys to React to?'));
-  vibrationFrom = prompt(chalk.green('> '));
-
-  if (!vibrationFrom || acceptedValues.indexOf(vibrationFrom) === -1) {
-    vibrationFrom = null;
-    console.warn(chalk.yellow('Invalid Value selected, please select a value from the list above'));
-  }
-}
-
-while (maxVibration === null) {
-  console.log(chalk.bold('What is the Max Vibration you would like to have? (1 to 20)'));
-  let stringMax = prompt(chalk.green('> '));
-  maxVibration = Number(stringMax);
-
-  if (isNaN(maxVibration) || maxVibration < 1) {
-    maxVibration = null;
-    console.warn(chalk.yellow('Please provide a Number between 1 & 20'));
-  } else if (maxVibration > 20) {
-    maxVibration = 20;
-    console.warn(chalk.grey('Number exceeds 20, Setting value to 20'));
-  }
-}
-
+/**
+ * @return {Promise<void>}
+ */
 (async function () {
   console.log('Options:');
   console.log(
@@ -190,6 +169,30 @@ while (maxVibration === null) {
   console.log(
     chalk.blue.bold('accel          ') + '- How hard are you pushing down on the Accel Pedal'
   );
+
+while (vibrationFrom === null) {
+  console.log(chalk.bold('Select an option for Toys to React to?'));
+  vibrationFrom = prompt(chalk.green('> '));
+
+  if (!vibrationFrom || acceptedValues.indexOf(vibrationFrom) === -1) {
+    vibrationFrom = null;
+    console.warn(chalk.yellow('Invalid Value selected, please select a value from the list above'));
+  }
+}
+
+while (maxVibration === null) {
+  console.log(chalk.bold('What is the Max Vibration you would like to have? (1 to 20)'));
+  let stringMax = prompt(chalk.green('> '));
+  maxVibration = Number(stringMax);
+
+  if (isNaN(maxVibration) || maxVibration < 1) {
+    maxVibration = null;
+    console.warn(chalk.yellow('Please provide a Number between 1 & 20'));
+  } else if (maxVibration > 20) {
+    maxVibration = 20;
+    console.warn(chalk.grey('Number exceeds 20, Setting value to 20'));
+  }
+}
 
   await forza.loadGames();
   forza.startAllGameSockets();
