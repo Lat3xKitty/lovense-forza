@@ -32,5 +32,10 @@
   "contributors": [
     "TrappyChastity"
   ],
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.7.1"
+  }
 }

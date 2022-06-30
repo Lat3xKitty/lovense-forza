@@ -1,4 +1,4 @@
-version: "0.2"
+version: '0.2'
 ignorePaths:
   - pnpm-lock.yaml
   - package-lock.json
@@ -6,9 +6,14 @@ dictionaryDefinitions: []
 dictionaries: []
 words:
   - Accel
-  - domi
+  - Domi
   - Forza
   - Lovense
+  - pnpm
   - Trappy
-ignoreWords: []
+  - vars
+ignoreWords:
+  - Parens
+  - bbwe
+  - wekyb
 import: []
