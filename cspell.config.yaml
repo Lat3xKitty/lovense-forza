@@ -1,4 +1,4 @@
-version: "0.2"
+version: '0.2'
 ignorePaths:
   - pnpm-lock.yaml
   - package-lock.json
@@ -9,10 +9,11 @@ words:
   - Domi
   - Forza
   - Lovense
-  - Trappy
   - pnpm
+  - Trappy
   - vars
 ignoreWords:
+  - Parens
   - bbwe
   - wekyb
 import: []
