@@ -20,6 +20,9 @@ const acceptedValues = [
   'rpm', 'rumble-average', 'speed', 'power', 'torque', 'brake', 'accel'
 ];
 
+var vibrationFrom = null;
+var maxVibration = null; // Max Power of 1-20 (Use 20 if ya wanna go wild)
+
 function getProp(myData) {
   const out = [];
   for (const key in myData)
@@ -72,15 +75,24 @@ const sendVibration = function (vibration) {
 };
 
 const processData = function (data) {
-
   /**
-   * Vibration Percentage expressed as number between `0-1`
+   * This is the clean vibration value that will be sent to the Lovense Toy.
+   * Max of 20
+   * 0 = stop
    * @type {number}
-   * @example
-   * var vibration = 0.5; // 50%
    */
-  let vibration = 0;
+  let vibrationInt = 0;
+  
   if (data.isRaceOn !== 0) {
+
+    /**
+     * Vibration Percentage expressed as number between `0-1`
+     * @type {number}
+     * @example
+     * var vibration = 0.5; // 50%
+     */
+    let vibration = 0;
+
     switch (vibrationFrom) {
       case 'rpm':
         vibration =
@@ -113,9 +125,8 @@ const processData = function (data) {
         break;
     }
 
-    let vibrationInt = Math.round(vibration * maxVibration);
+    vibrationInt = Math.round(vibration * maxVibration);
     if (vibrationInt > maxVibration) vibrationInt = maxVibration;
-
   }
   sendVibration(vibrationInt);
 };
@@ -130,7 +141,6 @@ const processData = function (data) {
   console.log(chalk.blue.bold("brake          ") + "- How hard are you pushing down on the Brake Pedal");
   console.log(chalk.blue.bold("accel          ") + "- How hard are you pushing down on the Accel Pedal");
 
-  var vibrationFrom = null;
   while (vibrationFrom === null) {
     console.log(chalk.bold("Select an option for Toys to React to?"))
     vibrationFrom = prompt( chalk.green("> ") );
@@ -143,7 +153,6 @@ const processData = function (data) {
     }
   }
 
-  var maxVibration = null; // Max Power of 1-20 (Use 20 if ya wanna go wild)
   while (maxVibration === null) {
     console.log(chalk.bold("What is the Max Vibration you would like to have? (1 to 20)"))
     var stringMax = prompt( chalk.green("> ") );
